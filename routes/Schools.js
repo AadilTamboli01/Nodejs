@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const pool = require("../config/db");
-const { validateSchool } = require("../validators/schoolValidator");
+const { validateSchool } = require("../validators/schoolValidator.js");
 const { calculateDistance } = require("../Utils/helper");
 
 router.post("/addSchool", validateSchool, async (req, res) => {
